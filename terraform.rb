@@ -12,4 +12,8 @@ class Terraform < Formula
   def install
     bin.install Dir['*']
   end
+
+  test do
+    system "#{bin}/terraform", "version"
+  end
 end
